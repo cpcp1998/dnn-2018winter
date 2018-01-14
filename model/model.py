@@ -81,7 +81,12 @@ def load(sess, path):
   print('Model restored from %s' % path)
   print('test accuracy %g' % accuracy.eval(feed_dict={
       x: x_test, y_: y_test, keep_prob: 1.0}))
-with tf.Session() as sess:
-  load(sess, './untrained.ckpt')
-  load(sess, './train0.ckpt')
-  load(sess, './train1.ckpt')
+
+def main():
+  with tf.Session() as sess:
+    load(sess, './untrained.ckpt')
+    load(sess, './train0.ckpt')
+    load(sess, './train1.ckpt')
+
+if __name__ == '__main__':
+  main()
