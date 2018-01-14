@@ -74,13 +74,14 @@ with tf.name_scope('accuracy'):
   correct_prediction = tf.cast(correct_prediction, tf.float32)
 accuracy = tf.reduce_mean(correct_prediction)
 
+graph = tf.get_default_graph()
 saver = tf.train.Saver()
 
 def load(sess, path):
   saver.restore(sess, path)
   print('Model restored from %s' % path)
   print('test accuracy %g' % accuracy.eval(feed_dict={
-      x: x_test, y_: y_test, keep_prob: 1.0}))
+      x: x_test, y_: y_test, keep_prob: 1.0}, session=sess))
 
 def main():
   with tf.Session() as sess:
