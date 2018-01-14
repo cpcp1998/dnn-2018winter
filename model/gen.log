@@ -1,0 +1,46 @@
+test accuracy 0.0915
+Model saved in file: ./untrained.ckpt
+epoch 0, test accuracy 0.9505
+epoch 1, test accuracy 0.9603
+epoch 2, test accuracy 0.9657
+epoch 3, test accuracy 0.9698
+epoch 4, test accuracy 0.9704
+epoch 5, test accuracy 0.9715
+epoch 6, test accuracy 0.9744
+epoch 7, test accuracy 0.975
+epoch 8, test accuracy 0.974
+epoch 9, test accuracy 0.9756
+epoch 10, test accuracy 0.9792
+epoch 11, test accuracy 0.9782
+epoch 12, test accuracy 0.9797
+epoch 13, test accuracy 0.9799
+epoch 14, test accuracy 0.9814
+epoch 15, test accuracy 0.9824
+epoch 16, test accuracy 0.9821
+epoch 17, test accuracy 0.9808
+epoch 18, test accuracy 0.9822
+epoch 19, test accuracy 0.9822
+test accuracy 0.9822
+Model saved in file: ./train0.ckpt
+epoch 0, test accuracy 0.9496
+epoch 1, test accuracy 0.9622
+epoch 2, test accuracy 0.9687
+epoch 3, test accuracy 0.9679
+epoch 4, test accuracy 0.9703
+epoch 5, test accuracy 0.9725
+epoch 6, test accuracy 0.9725
+epoch 7, test accuracy 0.9743
+epoch 8, test accuracy 0.9736
+epoch 9, test accuracy 0.9745
+epoch 10, test accuracy 0.9773
+epoch 11, test accuracy 0.9778
+epoch 12, test accuracy 0.9781
+epoch 13, test accuracy 0.9799
+epoch 14, test accuracy 0.981
+epoch 15, test accuracy 0.9795
+epoch 16, test accuracy 0.9806
+epoch 17, test accuracy 0.9821
+epoch 18, test accuracy 0.9834
+epoch 19, test accuracy 0.9841
+test accuracy 0.9841
+Model saved in file: ./train1.ckpt

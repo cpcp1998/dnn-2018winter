@@ -1,0 +1,4 @@
+model_checkpoint_path: "train1.ckpt"
+all_model_checkpoint_paths: "untrained.ckpt"
+all_model_checkpoint_paths: "train0.ckpt"
+all_model_checkpoint_paths: "train1.ckpt"
