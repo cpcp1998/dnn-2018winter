@@ -23,7 +23,7 @@ def bias_variable(shape):
 
 x = tf.placeholder(tf.float32, [None, 28, 28])
 
-y_ = tf.placeholder(tf.int64, [None])
+y = tf.placeholder(tf.int64, [None])
 
 with tf.name_scope('reshape'):
   x_image = tf.reshape(x, [-1, 28, 28, 1])
@@ -63,14 +63,14 @@ with tf.name_scope('fc2'):
 
 with tf.name_scope('loss'):
   cross_entropy = tf.losses.sparse_softmax_cross_entropy(
-      labels=y_, logits=y_conv)
+      labels=y, logits=y_conv)
 cross_entropy = tf.reduce_mean(cross_entropy)
 
 with tf.name_scope('adam_optimizer'):
   train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 
 with tf.name_scope('accuracy'):
-  correct_prediction = tf.equal(tf.argmax(y_conv, 1), y_)
+  correct_prediction = tf.equal(tf.argmax(y_conv, 1), y)
   correct_prediction = tf.cast(correct_prediction, tf.float32)
 accuracy = tf.reduce_mean(correct_prediction)
 
@@ -81,7 +81,7 @@ def load(sess, path):
   saver.restore(sess, path)
   print('Model restored from %s' % path)
   print('test accuracy %g' % accuracy.eval(feed_dict={
-      x: x_test, y_: y_test, keep_prob: 1.0}, session=sess))
+      x: x_test, y: y_test, keep_prob: 1.0}, session=sess))
 
 def main():
   with tf.Session() as sess:
