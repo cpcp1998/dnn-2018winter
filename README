@@ -1,0 +1,10 @@
+ONE NETWORK STRUCTURE TRAINED ON TWO DATASETS
+
+This is a course project for exploring something interesting in deep neural
+networks.  The course is hold by Prof. Hopcroft in Jan. 2018.
+
+The problem setting is: Consider two data sets of letters with the same set of
+letters but no common images.  If you train a network twice, once with each 
+set of images, do the network gates learn the same things?  If you train with
+one set of images and test with the other how well does the testing do?
+
