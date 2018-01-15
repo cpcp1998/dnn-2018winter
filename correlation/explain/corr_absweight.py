@@ -1,5 +1,5 @@
 import sys
-sys.path.append("..")
+sys.path.append("../..")
 
 from model import model
 import tensorflow as tf
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 class Activation(object):
   def __init__(self, name):
     with tf.Session(graph=model.graph) as sess:
-      model.load(sess, '../model/'+name+'.ckpt')
+      model.load(sess, '../../model/'+name+'.ckpt')
       h_conv1, h_conv2, h_fc1, y_conv = sess.run(
               (model.h_conv1, model.h_conv2, model.h_fc1, model.y_conv),
               feed_dict={model.x: model.x_test, model.keep_prob: 1.0})
@@ -45,7 +45,7 @@ corr = Corr(train0, train1)
 class Weight(object):
   def __init__(self, name):
     with tf.Session(graph=model.graph) as sess:
-      model.load(sess, '../model/'+name+'.ckpt')
+      model.load(sess, '../../model/'+name+'.ckpt')
       W_conv2, W_fc1, W_fc2 = sess.run(
               (model.W_conv2, model.W_fc1, model.W_fc2))
       W_conv2 = np.fabs(W_conv2)
