@@ -147,6 +147,6 @@ for upper in ['train0', 'train1']:
       for layer in [1, 2, 3]:
         before, after = similar_rate(lower, upper, layer, lower_bound, upper_bound)
         print('layer %s of %s fit into %s: %g, %g' % (
-          ['conv1', 'conv2', 'fc1', 'fc2'][layer],
+          ['conv1', 'conv2', 'fc1', 'fc2'][layer-1],
           lower, upper, before, after))
 
