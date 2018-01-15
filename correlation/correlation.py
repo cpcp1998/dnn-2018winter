@@ -36,9 +36,6 @@ class Corrcoef(object):
     self.h_fc1 = corrcoef(x.h_fc1, y.h_fc1)
     self.y_conv = corrcoef(x.y_conv, y.y_conv)
 
-untrain = Corrcoef(train0, untrained)
-train = Corrcoef(train0, train1)
-
 def absmax(array):
   array = np.fabs(array)
   return np.nanmax(array, axis=1)
@@ -65,6 +62,13 @@ def plot_and_save(corr, name):
   plt.clf()
   print('%s y_conv: %g' % (name, np.nanmean(absmax(corr.y_conv))))
 
+untrain = Corrcoef(train0, untrained)
 plot_and_save(untrain, 'untrain')
+del untrain
+train = Corrcoef(train0, train1)
 plot_and_save(train, 'train')
+del train
+untrain_rev = Corrcoef(untrained, train0)
+plot_and_save(untrain_rev, 'untrain_rev')
+del untrain_rev
 
