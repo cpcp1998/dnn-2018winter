@@ -26,6 +26,7 @@ train0 = Activation('train0')
 train1 = Activation('train1')
 
 def multivar_linear_loss(x, y):
+  x = np.concatenate((x, np.ones((1, x.shape[1]))), axis=0)
   yyt = np.vdot(y,y)
   xt = np.transpose(x)
   yxt = np.matmul(y, xt)
@@ -36,6 +37,7 @@ def multivar_linear_loss(x, y):
   return yyt - np.vdot(temp, xyt)
 
 def linear_similarity(x, y):
+  x = np.concatenate((x, np.ones((1, x.shape[1]))), axis=0)
   xt = np.transpose(x)
   yt = np.transpose(y)
   yyt = np.matmul(y, yt)
@@ -45,7 +47,17 @@ def linear_similarity(x, y):
   xxti = np.linalg.pinv(xxt)
   temp = np.matmul(yxt, xxti)
   temp = yyt - np.matmul(temp, xyt)
-  return np.trace(temp) / x.shape[0] / x.shape[1]
+  return np.diag(temp) / y.shape[1]
+
+def corrcoef_one(x, y):
+  std = np.std(y)
+  return np.divide(multivar_linear_loss(x, y), std*std)
+
+def corrcoef(x, y):
+  num = linear_similarity(x, y)
+  std = np.std(y, axis = 1)
+  temp = 1 - np.divide(num, np.square(std))
+  return np.sqrt(np.fabs(temp))
 
 layers = ['h_conv1', 'h_conv2', 'h_fc1', 'y_conv']
 networks = [untrained, train0, train1]
@@ -57,9 +69,10 @@ for net1 in networks:
   for net2 in networks:
     if net1 != net2:
       for layer in layers:
-        print('Fit layer %s in %s using %s: %g' %
-            (layer, net2.name, net1.name,
-             math.sqrt(linear_similarity(getattr(net1,layer),
-                                         getattr(net2, layer)))
-            ))
+        x = getattr(net1, layer)
+        y = getattr(net2, layer)
+        co = corrcoef(x, y)
+        plt.hist(co, bins='auto', range=(0,1))
+        plt.savefig('multi_%s_%s_to_%s.png' % (layer, net1.name, net2.name))
+        plt.clf()
 

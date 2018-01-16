@@ -4,27 +4,3 @@ Model restored from ../model/train0.ckpt
 test accuracy 0.9822
 Model restored from ../model/train1.ckpt
 test accuracy 0.9841
-Fit layer h_conv1 in train0 using untrained: 2.34498
-Fit layer h_conv2 in train0 using untrained: 6.08112
-Fit layer h_fc1 in train0 using untrained: 8.66284
-Fit layer y_conv in train0 using untrained: 78.7697
-Fit layer h_conv1 in train1 using untrained: 2.35188
-Fit layer h_conv2 in train1 using untrained: 5.99002
-Fit layer h_fc1 in train1 using untrained: 8.60385
-Fit layer y_conv in train1 using untrained: 80.4077
-Fit layer h_conv1 in untrained using train0: 4.76461
-Fit layer h_conv2 in untrained using train0: 21.808
-Fit layer h_fc1 in untrained using train0: 60.2482
-Fit layer y_conv in untrained using train0: 377.636
-Fit layer h_conv1 in train1 using train0: 1.06153
-Fit layer h_conv2 in train1 using train0: 3.81609
-Fit layer h_fc1 in train1 using train0: 7.50234
-Fit layer y_conv in train1 using train0: 31.075
-Fit layer h_conv1 in untrained using train1: 4.80777
-Fit layer h_conv2 in untrained using train1: 22.3236
-Fit layer h_fc1 in untrained using train1: 61.2851
-Fit layer y_conv in untrained using train1: 373.773
-Fit layer h_conv1 in train0 using train1: 1.06607
-Fit layer h_conv2 in train0 using train1: 3.85954
-Fit layer h_fc1 in train0 using train1: 7.56217
-Fit layer y_conv in train0 using train1: 30.9804
