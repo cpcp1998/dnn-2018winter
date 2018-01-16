@@ -1,0 +1,9 @@
+2018-01-17 01:00:20.189869: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+/usr/local/lib/python3.5/dist-packages/matplotlib/axes/_base.py:2961: UserWarning: Attempting to set identical left==right results
+in singular transformations; automatically expanding.
+left=-0.0, right=0.0
+  'left=%s, right=%s') % (left, right))
+/usr/local/lib/python3.5/dist-packages/matplotlib/axes/_base.py:3285: UserWarning: Attempting to set identical bottom==top results
+in singular transformations; automatically expanding.
+bottom=-0.0, top=0.0
+  'bottom=%s, top=%s') % (bottom, top))
