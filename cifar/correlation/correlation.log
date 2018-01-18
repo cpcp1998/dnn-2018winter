@@ -1,0 +1,24 @@
+Model restored from ../model/untrained.ckpt
+test accuracy 0.0973
+Model restored from ../model/train0.ckpt
+test accuracy 0.712
+Model restored from ../model/train1.ckpt
+test accuracy 0.7199
+untrain h_conv1: 0.747975
+untrain h_conv2: 0.537638
+untrain h_conv3: 0.482501
+untrain h_conv4: 0.274319
+untrain h_fc1: 0.220191
+untrain y_conv: 0.317157
+train h_conv1: 0.953856
+train h_conv2: 0.857593
+train h_conv3: 0.849121
+train h_conv4: 0.689601
+train h_fc1: 0.36375
+train y_conv: 0.875929
+untrain_rev h_conv1: 0.632096
+untrain_rev h_conv2: 0.584009
+untrain_rev h_conv3: 0.422241
+untrain_rev h_conv4: 0.293903
+untrain_rev h_fc1: 0.23063
+untrain_rev y_conv: 0.325424

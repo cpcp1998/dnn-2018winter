@@ -1,0 +1,6 @@
+Model restored from ../model/untrained.ckpt
+test accuracy 0.0973
+Model restored from ../model/train0.ckpt
+test accuracy 0.712
+Model restored from ../model/train1.ckpt
+test accuracy 0.7199
