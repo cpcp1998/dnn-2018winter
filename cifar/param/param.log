@@ -1,0 +1,39 @@
+Model restored from ../model/untrained.ckpt
+Model restored from ../model/train0.ckpt
+Model restored from ../model/train1.ckpt
+0.87037 of parameters changed in the same direction in layer W_conv1
+Parameters of layer W_conv1 changed by 0.397839
+cos of angle between two changes of layer W_conv1: 0.850366
+0.78125 of parameters changed in the same direction in layer b_conv1
+Parameters of layer b_conv1 changed by inf
+cos of angle between two changes of layer b_conv1: 0.568176
+0.797092 of parameters changed in the same direction in layer W_conv2
+Parameters of layer W_conv2 changed by 0.884267
+cos of angle between two changes of layer W_conv2: 0.732467
+0.8125 of parameters changed in the same direction in layer b_conv2
+Parameters of layer b_conv2 changed by inf
+cos of angle between two changes of layer b_conv2: 0.774822
+0.762967 of parameters changed in the same direction in layer W_conv3
+Parameters of layer W_conv3 changed by 1.16555
+cos of angle between two changes of layer W_conv3: 0.696134
+0.75 of parameters changed in the same direction in layer b_conv3
+Parameters of layer b_conv3 changed by inf
+cos of angle between two changes of layer b_conv3: 0.816689
+0.707357 of parameters changed in the same direction in layer W_conv4
+Parameters of layer W_conv4 changed by 0.965488
+cos of angle between two changes of layer W_conv4: 0.561761
+0.703125 of parameters changed in the same direction in layer b_conv4
+Parameters of layer b_conv4 changed by inf
+cos of angle between two changes of layer b_conv4: 0.69795
+0.545496 of parameters changed in the same direction in layer W_fc1
+Parameters of layer W_fc1 changed by 1.12146
+cos of angle between two changes of layer W_fc1: 0.126792
+0.791016 of parameters changed in the same direction in layer b_fc1
+Parameters of layer b_fc1 changed by inf
+cos of angle between two changes of layer b_fc1: 0.778214
+0.708203 of parameters changed in the same direction in layer W_fc2
+Parameters of layer W_fc2 changed by 0.810807
+cos of angle between two changes of layer W_fc2: 0.644664
+1 of parameters changed in the same direction in layer b_fc2
+Parameters of layer b_fc2 changed by inf
+cos of angle between two changes of layer b_fc2: 0.975239

@@ -1,0 +1,27 @@
+Model restored from ../model/untrained.ckpt
+Model restored from ../model/train0.ckpt
+Model restored from ../model/train1.ckpt
+0.84 of parameters changed in the same direction in layer W_conv1
+Parameters of layer W_conv1 changed by 0.152195
+cos of angle between two changes of layer W_conv1: 0.85632
+0.875 of parameters changed in the same direction in layer b_conv1
+Parameters of layer b_conv1 changed by 0.0930898
+cos of angle between two changes of layer b_conv1: 0.91695
+0.72334 of parameters changed in the same direction in layer W_conv2
+Parameters of layer W_conv2 changed by 0.122466
+cos of angle between two changes of layer W_conv2: 0.627404
+0.859375 of parameters changed in the same direction in layer b_conv2
+Parameters of layer b_conv2 changed by 0.0971355
+cos of angle between two changes of layer b_conv2: 0.923891
+0.717944 of parameters changed in the same direction in layer W_fc1
+Parameters of layer W_fc1 changed by 0.095782
+cos of angle between two changes of layer W_fc1: 0.564023
+0.924805 of parameters changed in the same direction in layer b_fc1
+Parameters of layer b_fc1 changed by 0.0633529
+cos of angle between two changes of layer b_fc1: 0.902713
+0.735547 of parameters changed in the same direction in layer W_fc2
+Parameters of layer W_fc2 changed by 0.10507
+cos of angle between two changes of layer W_fc2: 0.62902
+0.9 of parameters changed in the same direction in layer b_fc2
+Parameters of layer b_fc2 changed by 0.134987
+cos of angle between two changes of layer b_fc2: 0.932541
