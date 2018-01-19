@@ -12,7 +12,7 @@ train h_conv1: 0.980692
 train h_conv2: 0.894508
 train h_fc1: 0.516758
 train y_conv: 0.923981
-untrain_rev h_conv1: 0.917744
-untrain_rev h_conv2: 0.664891
-untrain_rev h_fc1: 0.380249
-untrain_rev y_conv: 0.388835
+untrain_rev h_conv1: 0.91409
+untrain_rev h_conv2: 0.67254
+untrain_rev h_fc1: 0.378653
+untrain_rev y_conv: 0.373404

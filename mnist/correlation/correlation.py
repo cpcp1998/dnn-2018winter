@@ -64,11 +64,19 @@ def plot_and_save(corr, name):
 
 untrain = Corrcoef(train0, untrained)
 plot_and_save(untrain, 'untrain')
-del untrain
 train = Corrcoef(train0, train1)
 plot_and_save(train, 'train')
-del train
-untrain_rev = Corrcoef(untrained, train0)
+untrain_rev = Corrcoef(untrained, train1)
 plot_and_save(untrain_rev, 'untrain_rev')
-del untrain_rev
 
+for i in range(4):
+  layer = ['h_conv1', 'h_conv2', 'h_fc1', 'y_conv'][i]
+  unt = absmax(getattr(untrain_rev, layer))
+  trd = absmax(getattr(train, layer))
+  plt.hist(trd, bins='auto', range=(0, 1), color='#0000FF80', density=True)
+  plt.hist(unt, bins='auto', range=(0, 1), color='#FF000080', density=True)
+  plt.xlabel('correlation r')
+  plt.ylabel('proportion of neurons/Δr')
+  plt.title(['conv1', 'conv2', 'fc1', 'fc2'][i])
+  plt.savefig('paper_'+layer+'.png')
+  plt.clf()
