@@ -78,3 +78,17 @@ for net1 in networks:
         plt.savefig('multi_%s_%s_to_%s.png' % (layer, net1.name, net2.name))
         plt.clf()
 
+for i in range(6):
+  layer = layers[i]
+  unt = getattr(untrained, layer)
+  t0 = getattr(train0, layer)
+  t1 = getattr(train1, layer)
+  co_unt = corrcoef(unt, t1)
+  co_trd = corrcoef(t0, t1)
+  plt.hist(co_trd, bins='auto', range=(0, 1), color='#0000FF80', density=True)
+  plt.hist(co_unt, bins='auto', range=(0, 1), color='#FF000080', density=True)
+  plt.xlabel('correlation r', fontsize=18)
+  plt.ylabel('proportion of neurons/Δr', fontsize=18)
+  plt.title(['conv1', 'conv2', 'conv3', 'conv4', 'fc1', 'fc2'][i], fontsize=18)
+  plt.savefig('paper_multi_'+layer+'.png')
+  plt.clf()
